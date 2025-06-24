@@ -130,7 +130,7 @@ export class Service {
 
   async filePreview(fileId) {
     try {
-      return await this.buckets.getFileView(
+      return await this.buckets.getFilePreview(
         conf.appwriteBucketId, // bucketId
         fileId, // fileId
       );
