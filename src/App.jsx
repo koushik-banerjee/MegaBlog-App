@@ -22,11 +22,11 @@ function App() {
           dispatch(logout());
         }
       })
-      .catch((error) => {
-        console.error("Error fetching user:", error);
-        dispatch(logout());
-      })
-      .finally(() => setLoading(false));
+      // .catch((error) => {
+      //   console.error("Error fetching user:", error);
+      //   dispatch(logout());
+      // })
+      .finally(() => setLoading(false))
   }, [dispatch]);
 
   if (loading) {
@@ -42,7 +42,7 @@ function App() {
       <div className="w-full block">
         <Header />
         <main>
-          Todo:  <Outlet/>
+          Todo: <Outlet/>
         </main>
         <Footer />
       </div>
